@@ -1,29 +1,31 @@
 import { ProxyState } from "../AppState.js";
-import { valuesService } from "../Services/ValuesService.js";
+import { quoteService } from "../Services/QuoteService.js";
 
 
 //Private
 function _draw() {
-    let values = ProxyState.values;
+    let quote = ProxyState.quote;
     let template = ''
-    values.forEach(v => template += v.Template)
-    document.getElementById("app").innerHTML = /*html*/`
-  <button className="btn btn-info" onclick="app.valuesController.addValue()">Add Value</button>  
-  <div className="card-columns values">
-      ${template}
-  </div>
-  `
+    document.getElementById("quote").innerHTML = ProxyState.quote.Template
 }
 
 //Public
-export default class ValuesController {
+export default class QuoteController {
     constructor() {
-        ProxyState.on("values", _draw);
-        _draw()
+        ProxyState.on("quote", _draw);
+        this.getQuote()
     }
 
-    addValue() {
-        valuesService.addValue()
+    async getQuote() {
+        try {
+            await quoteService.getQuote()
+        } catch (error) {
+            console.error(error)
+        }
+    }
+
+    author() {
+        quoteService.author()
     }
 
 }

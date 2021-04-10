@@ -11,7 +11,7 @@ class AppState extends EventEmitter {
 
   weather = {}
 
-  quote = []
+  quote = {}
 
   clock = []
 }

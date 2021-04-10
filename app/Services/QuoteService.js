@@ -1,10 +1,13 @@
 import { ProxyState } from "../AppState.js";
-import Value from "../Models/Value.js";
+import Quote from "../Models/Quote.js";
+import { sandboxApi } from "./AxiosService.js";
 
-class ValuesService {
-    addValue() {
-        ProxyState.values = [...ProxyState.values, new Value({ title: Math.random() })]
+class QuoteService {
+    async getQuote() {
+        let res = await sandboxApi.get('Quotes')
+        console.log(res.data)
+        ProxyState.quote = new Quote(res.data)
     }
 }
 
-export const valuesService = new ValuesService();
+export const quoteService = new QuoteService();
