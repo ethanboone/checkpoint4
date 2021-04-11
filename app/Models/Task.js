@@ -13,7 +13,7 @@ export default class Task {
         return /*html*/`
             <div class="d-flex align-items-center justify-content-between">
                 ${this.completed == true ? '<i class="fas fa-check"></i>' : ''}
-                <button class="btn btn-sm btn-outline-success m-2" onclick="app.todoController.completed('${this.id}')">Done</button>
+                <button class="btn btn-sm text-success m-2" onclick="app.todoController.completed('${this.id}')">Done</button>
                     <div class="d-flex flex-column m-2">
                         <span>${this.description}</span>
                     </div>
