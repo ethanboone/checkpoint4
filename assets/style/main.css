@@ -55,13 +55,13 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: 'Roboto Mono', monospace;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-image: url('https://images.unsplash.com/photo-1581373449483-37449f962b6c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+  background-image: url('https://photographyunfolded.com/wp-content/uploads/2018/08/fiery-chicago-2048.jpg');
   background-size: cover;
 }
 
@@ -74,6 +74,10 @@ body {
   color: var(--light)!important;
 }
 
+
+#quote-row {
+  min-height: 25vh;
+}
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;

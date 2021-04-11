@@ -5,7 +5,7 @@ import QuoteController from "./Controllers/QuoteController.js"
 
 class App {
   todoController = new TodoController()
-  //clockController = new ClockController()
+  clockController = new ClockController()
   quoteController = new QuoteController()
   weatherController = new WeatherController()
 }

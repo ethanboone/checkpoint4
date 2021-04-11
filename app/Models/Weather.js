@@ -10,7 +10,7 @@ export default class Weather {
 
         return /*html*/`
         <div class="p-2">
-            <button class="btn text-light" onclick="app.weatherController.change()">
+            <button class="btn text-dark" onclick="app.weatherController.change()">
                 <div>${this.Temp}</div>
                 <div>${this.location}</div>
             </button>
