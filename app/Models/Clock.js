@@ -22,10 +22,7 @@ export default class Clock {
         min = updateTime(min);
         sec = updateTime(sec);
         let t = setTimeout(getTime, 1000);
-        console.log(ProxyState.clock)
         hour + " : " + min + " : " + sec + " " + midday; /* adding time to the div */
-        /* setting timer */
-        //ProxyState.values = [...ProxyState.values, new Value({ title: Math.random() })]
     }
     updateTime(k) { /* appending 0 before time elements if less than 10 */
         if (k < 10) {

@@ -66,6 +66,12 @@ body {
 }
 
 
+main {
+  max-height: 100vh!important;
+}
+
+
+
 #author {
   color: transparent!important;
 }
@@ -75,9 +81,7 @@ body {
 }
 
 
-#quote-row {
-  min-height: 25vh;
-}
+
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
